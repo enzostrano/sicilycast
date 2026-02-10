@@ -3,111 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SicilyCast - Enzo Strano | Remote vMix Technical Director</title>
-  <meta name="description" content="Remote vMix Technical Director based in Sicily. Corporate live streams, virtual events, and multi-location broadcasts for European clients.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary: #2563eb;
-      --dark: #0f172a;
-      --light: #f8fafc;
-      --text: #334155;
-      --accent: #3b82f6;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-    body { background: var(--light); color: var(--text); line-height: 1.6; }
-    
-    /* Header */
-    header { background: var(--dark); color: white; padding: 80px 20px; text-align: center; }
-    h1 { font-size: 3rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -1px; }
-    .subtitle { font-size: 1.25rem; color: #94a3b8; max-width: 600px; margin: 0 auto 30px; }
-    .btn { display: inline-block; background: var(--primary); color: white; padding: 12px 30px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.2s; }
-    .btn:hover { background: var(--accent); transform: translateY(-2px); }
-
-    /* Container */
-    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-    
-    /* Sections */
-    section { margin-bottom: 60px; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
-    h2 { font-size: 1.8rem; color: var(--dark); margin-bottom: 20px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
-    
-    /* Grids */
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-    .card { background: #f1f5f9; padding: 25px; border-radius: 12px; }
-    .card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.1rem; }
-    
-    /* Lists */
-    ul { list-style: none; }
-    li { margin-bottom: 10px; padding-left: 20px; position: relative; }
-    li::before { content: "•"; color: var(--primary); font-weight: bold; position: absolute; left: 0; }
-
-    /* Certs */
-    .certs { display: flex; flex-wrap: wrap; gap: 10px; }
-    .tag { background: #e0f2fe; color: #0369a1; padding: 5px 12px; border-radius: 20px; font-size: 0.9rem; font-weight: 500; }
-
-    /* Footer */
-    footer { text-align: center; padding: 40px; color: #64748b; font-size: 0.9rem; border-top: 1px solid #e2e8f0; }
-
-    /* Mobile */
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      section { padding: 25px; }
-    }
-  </style>
+  <title>SicilyCast | Remote Broadcast Studio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <h1>SicilyCast</h1>
-  <p class="subtitle">Enzo Strano — Remote vMix Technical Director</p>
-  <p style="margin-bottom: 20px; color: #cbd5e1;">Fully remote studio in Sicily serving UK & Europe</p>
-  <a href="#contact" class="btn">Book Production</a>
-</header>
+  <nav>
+    <a href="index.html" class="logo">SicilyCast</a>
+    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Studio</a>
+      <a href="services.html">Services</a>
+      <a href="portfolio.html">Work</a>
+      <a href="contact.html" class="cta-btn">Book Recon</a>
+    </div>
+  </nav>
 
-<div class="container">
+  <!-- Hero with Video Background -->
+  <section class="hero">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Turn Remote Events<br>Into Live TV</h1>
+      <p style="margin-bottom: 30px; font-size: 1.3rem;">Fully remote vMix Technical Director delivering broadcast-quality corporate events from a redundant Sicily studio.</p>
+      <a href="contact.html" class="cta-btn" style="padding: 15px 40px; font-size: 1.1rem;">Get Production Quote</a>
+    </div>
+  </section>
 
-  <!-- Value Prop -->
-  <section>
-    <h2>Remote Broadcast Production</h2>
-    <p>I turn remote speakers, webcams, or venue cameras into a polished "TV-style" show. Operating from a fully redundant remote studio in Sicily, I deliver broadcast-quality streams for corporate clients across Europe.</p>
-    <br>
+  <!-- Key Value Props -->
+  <section class="grid-section">
+    <h2 class="fade-in">Why Remote Production?</h2>
     <div class="grid">
-      <div class="card">
-        <h3>What I Deliver</h3>
-        <ul>
-          <li>End-to-end remote technical direction (vMix)</li>
-          <li>Multi-country broadcasts (UK/FR/DE → one show)</li>
-          <li>Live switching, graphics, branding & audio</li>
-          <li>Streaming to any platform + simultaneous recording</li>
-        </ul>
+      <div class="card fade-in">
+        <i class="fas fa-satellite-dish card-icon"></i>
+        <h3>Fully Remote Ops</h3>
+        <p>I control cameras, audio, and graphics from Sicily. You stay on-site or remote. No travel costs, full broadcast capability.</p>
       </div>
-      <div class="card">
-        <h3>Studio Infrastructure</h3>
-        <ul>
-          <li>Fibre internet + Starlink failover (Dual-WAN)</li>
-          <li>High-end Production PCs (RTX 5090 GPUs)</li>
-          <li>UPS power protection & redundancy</li>
-          <li>NDI / BirdDog / Dante workflows</li>
-        </ul>
+      <div class="card fade-in">
+        <i class="fas fa-globe-europe card-icon"></i>
+        <h3>Multi-Country Sync</h3>
+        <p>Speakers in London, Paris, and Berlin? I unify them into one coherent, branded TV show in real-time.</p>
+      </div>
+      <div class="card fade-in">
+        <i class="fas fa-server card-icon"></i>
+        <h3>Enterprise Redundancy</h3>
+        <p>Fibre + Starlink failover. RTX 5090 GPUs. UPS power. 99.99% reliability for mission-critical comms.</p>
       </div>
     </div>
   </section>
 
-  <!-- Detailed Services -->
-  <section>
-    <h2>Detailed Capabilities</h2>
-    <div class="grid">
-      <div>
-        <h3>Remote vMix Operation</h3>
-        <ul>
-          <li>Multi-camera switching (3-8 remote sources)</li>
-          <li>Live graphics (lower thirds, countdowns, overlays)</li>
-          <li>Remote guest management (Zoom/Teams/vMix Call)</li>
-          <li>Stream Deck automation for error-free shows</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Post-Production</h3>
-        <ul>
-          <li>DaVinci Resolve video editing</li>
-          <li>Professional colour gradi
+  <!-- Image Breaker -->
+  <section style="position: relative; height: 400px; display: flex; align-items: center; justify-content: center; background: url('https://images.unsplash.com/photo-1598550476439-c4f12e6d288c?auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
+    <div class="overlay" style="background: rgba(0,0,0,0.7);"></div>
+    <div class="hero-content fade-in">
+      <h2>Featured by BirdDog</h2>
+      <p>Recognized for pioneering NDI-first remote corporate workflows.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Enzo Strano | SicilyCast Remote Studio | <a href="https://linkedin.com/in/enzostrano" style="color: white;">LinkedIn</a></p>
+  </footer>
+
+  <script>
+    // Mobile Menu
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    // Scroll Animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
