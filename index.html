@@ -6,93 +6,89 @@
   <title>SicilyCast | Remote vMix Director</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
+  <!-- Nav -->
   <nav>
     <div class="logo">SicilyCast</div>
     <div class="status-badge">
       <div class="pulse"></div>
-      <span>AVAILABLE FOR BOOKING</span>
+      <span>LIVE</span>
     </div>
   </nav>
 
-  <div class="bento-container">
-    
-    <!-- Hero Block -->
-    <div class="card col-span-2 row-span-2 video-card">
-      <video autoplay muted loop playsinline class="bg-video">
-        <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
-      </video>
-      <div class="content-overlay">
-        <h1>Remote Broadcast<br>Redefined.</h1>
-        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">Turn any webcam or venue into a global TV show.</p>
-        <a href="mailto:enzo@esrs.uk" class="btn">Get a Quote</a>
-      </div>
-    </div>
-
-    <!-- Intro Text -->
-    <div class="card col-span-2">
-      <h3>Enzo Strano — Technical Director</h3>
-      <h2>I run your show remotely from Sicily.</h2>
-      <p>17 years London experience. Now operating a redundant fibre-connected studio in Italy. I switch cameras, manage audio, and direct graphics for clients across Europe.</p>
-    </div>
-
-    <!-- Stat 1 -->
-    <div class="card">
-      <h3>Uptime</h3>
-      <h2 style="font-size: 2.5rem; color: #22c55e;">99.9%</h2>
-      <p>Starlink Failover Active</p>
-    </div>
-
-    <!-- Stat 2 -->
-    <div class="card">
-      <h3>Capacity</h3>
-      <h2 style="font-size: 2.5rem; color: #3b82f6;">8 Cams</h2>
-      <p>Remote NDI Sources</p>
-    </div>
-
-    <!-- Services Ticker -->
-    <div class="card col-span-4" style="padding: 10px 0; background: black;">
-      <div class="ticker-wrap">
-        <div class="ticker">
-          <span class="tech-item">vMIX PRO</span>
-          <span class="tech-item">NDI TOOLS</span>
-          <span class="tech-item">DANTE AUDIO</span>
-          <span class="tech-item">BIRDDOG PTZ</span>
-          <span class="tech-item">SRT STREAMING</span>
-          <span class="tech-item">RTX 5090 STUDIO</span>
-          <!-- Duplicate for seamless loop -->
-          <span class="tech-item">vMIX PRO</span>
-          <span class="tech-item">NDI TOOLS</span>
-          <span class="tech-item">DANTE AUDIO</span>
-          <span class="tech-item">BIRDDOG PTZ</span>
-          <span class="tech-item">SRT STREAMING</span>
-          <span class="tech-item">RTX 5090 STUDIO</span>
+  <!-- Main Grid -->
+  <div class="main-container">
+    <div class="grid">
+      
+      <!-- HERO (Big Video) -->
+      <div class="card col-8 row-2 video-card">
+        <video autoplay muted loop playsinline class="bg-video">
+          <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
+        </video>
+        <div class="overlay">
+          <h1>Remote Broadcast<br>Redefined.</h1>
+          <p>I turn your webcam event into a global TV show.</p>
+          <a href="mailto:enzo@esrs.uk" class="btn">Get a Quote</a>
         </div>
       </div>
-    </div>
 
-    <!-- Case Study -->
-    <div class="card col-span-2">
-      <h3>Featured Work</h3>
-      <h2>UN Davos Event</h2>
-      <p style="margin-bottom: 15px;">Controlled 6 BirdDog PTZ cameras in Switzerland from my desk in Sicily. Zero latency issues. Full broadcast graphics.</p>
-      <div style="display: flex; gap: 10px;">
-        <span class="status-badge" style="background: rgba(255,255,255,0.1); color: white; border: none;">Remote TD</span>
-        <span class="status-badge" style="background: rgba(255,255,255,0.1); color: white; border: none;">Hybrid</span>
+      <!-- INTRO -->
+      <div class="card col-4">
+        <h3>Enzo Strano</h3>
+        <h2>Sicily Studio.</h2>
+        <p>17 years London exp. Now operating remotely with redundancy.</p>
       </div>
-    </div>
 
-    <!-- Contact Block -->
-    <div class="card col-span-2" style="background: #2563eb; border: none;">
-      <h3 style="color: rgba(255,255,255,0.7);">Ready to go live?</h3>
-      <h2 style="color: white;">Let's build your rundown.</h2>
-      <p style="color: rgba(255,255,255,0.9);">Technical Recon from €150. Full show ops from €450.</p>
-      <a href="mailto:enzo@esrs.uk" class="btn" style="background: black; color: white;">Book Enzo</a>
-    </div>
+      <!-- STAT 1 -->
+      <div class="card col-2">
+        <h3>Uptime</h3>
+        <h2 style="color: #22c55e;">99.9%</h2>
+      </div>
 
+      <!-- STAT 2 -->
+      <div class="card col-2">
+        <h3>Capacity</h3>
+        <h2 style="color: #3b82f6;">8 Cams</h2>
+      </div>
+
+      <!-- SERVICES TICKER -->
+      <div class="card col-12 ticker-card">
+        <div class="ticker-wrap">
+          <div class="ticker">
+            <span class="tech-item">vMIX PRO</span>
+            <span class="tech-item">NDI TOOLS</span>
+            <span class="tech-item">DANTE AUDIO</span>
+            <span class="tech-item">BIRDDOG PTZ</span>
+            <span class="tech-item">RTX 5090</span>
+            <span class="tech-item">STARLINK</span>
+            <!-- Duplicate -->
+            <span class="tech-item">vMIX PRO</span>
+            <span class="tech-item">NDI TOOLS</span>
+            <span class="tech-item">DANTE AUDIO</span>
+            <span class="tech-item">BIRDDOG PTZ</span>
+            <span class="tech-item">RTX 5090</span>
+            <span class="tech-item">STARLINK</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UN DAVOS CASE STUDY -->
+      <div class="card col-6">
+        <h3>Featured Work</h3>
+        <h2>UN Davos Event</h2>
+        <p>Controlled 6 BirdDog PTZ cameras in Switzerland from Sicily. Zero latency. Full broadcast graphics.</p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="card col-6" style="background: #2563eb;">
+        <h3 style="color: rgba(255,255,255,0.7);">Ready?</h3>
+        <h2>Start Production.</h2>
+        <a href="mailto:enzo@esrs.uk" class="btn" style="background: black; color: white;">Book Now</a>
+      </div>
+
+    </div>
   </div>
 
 </body>
