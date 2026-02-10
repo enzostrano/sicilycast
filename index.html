@@ -3,87 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SicilyCast | Remote Broadcast Studio</title>
+  <title>SicilyCast | Remote vMix Director</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <nav>
-    <a href="index.html" class="logo">SicilyCast</a>
-    <div class="menu-toggle"><i class="fas fa-bars"></i></div>
-    <div class="nav-links">
-      <a href="index.html" class="active">Studio</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Work</a>
-      <a href="contact.html" class="cta-btn">Book Recon</a>
+    <div class="logo">SicilyCast</div>
+    <div class="status-badge">
+      <div class="pulse"></div>
+      <span>AVAILABLE FOR BOOKING</span>
     </div>
   </nav>
 
-  <!-- Hero with Video Background -->
-  <section class="hero">
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Turn Remote Events<br>Into Live TV</h1>
-      <p style="margin-bottom: 30px; font-size: 1.3rem;">Fully remote vMix Technical Director delivering broadcast-quality corporate events from a redundant Sicily studio.</p>
-      <a href="contact.html" class="cta-btn" style="padding: 15px 40px; font-size: 1.1rem;">Get Production Quote</a>
-    </div>
-  </section>
-
-  <!-- Key Value Props -->
-  <section class="grid-section">
-    <h2 class="fade-in">Why Remote Production?</h2>
-    <div class="grid">
-      <div class="card fade-in">
-        <i class="fas fa-satellite-dish card-icon"></i>
-        <h3>Fully Remote Ops</h3>
-        <p>I control cameras, audio, and graphics from Sicily. You stay on-site or remote. No travel costs, full broadcast capability.</p>
-      </div>
-      <div class="card fade-in">
-        <i class="fas fa-globe-europe card-icon"></i>
-        <h3>Multi-Country Sync</h3>
-        <p>Speakers in London, Paris, and Berlin? I unify them into one coherent, branded TV show in real-time.</p>
-      </div>
-      <div class="card fade-in">
-        <i class="fas fa-server card-icon"></i>
-        <h3>Enterprise Redundancy</h3>
-        <p>Fibre + Starlink failover. RTX 5090 GPUs. UPS power. 99.99% reliability for mission-critical comms.</p>
+  <div class="bento-container">
+    
+    <!-- Hero Block -->
+    <div class="card col-span-2 row-span-2 video-card">
+      <video autoplay muted loop playsinline class="bg-video">
+        <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
+      </video>
+      <div class="content-overlay">
+        <h1>Remote Broadcast<br>Redefined.</h1>
+        <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">Turn any webcam or venue into a global TV show.</p>
+        <a href="mailto:enzo@esrs.uk" class="btn">Get a Quote</a>
       </div>
     </div>
-  </section>
 
-  <!-- Image Breaker -->
-  <section style="position: relative; height: 400px; display: flex; align-items: center; justify-content: center; background: url('https://images.unsplash.com/photo-1598550476439-c4f12e6d288c?auto=format&fit=crop&w=1920&q=80') center/cover fixed;">
-    <div class="overlay" style="background: rgba(0,0,0,0.7);"></div>
-    <div class="hero-content fade-in">
-      <h2>Featured by BirdDog</h2>
-      <p>Recognized for pioneering NDI-first remote corporate workflows.</p>
+    <!-- Intro Text -->
+    <div class="card col-span-2">
+      <h3>Enzo Strano — Technical Director</h3>
+      <h2>I run your show remotely from Sicily.</h2>
+      <p>17 years London experience. Now operating a redundant fibre-connected studio in Italy. I switch cameras, manage audio, and direct graphics for clients across Europe.</p>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 Enzo Strano | SicilyCast Remote Studio | <a href="https://linkedin.com/in/enzostrano" style="color: white;">LinkedIn</a></p>
-  </footer>
+    <!-- Stat 1 -->
+    <div class="card">
+      <h3>Uptime</h3>
+      <h2 style="font-size: 2.5rem; color: #22c55e;">99.9%</h2>
+      <p>Starlink Failover Active</p>
+    </div>
 
-  <script>
-    // Mobile Menu
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('active');
-    });
+    <!-- Stat 2 -->
+    <div class="card">
+      <h3>Capacity</h3>
+      <h2 style="font-size: 2.5rem; color: #3b82f6;">8 Cams</h2>
+      <p>Remote NDI Sources</p>
+    </div>
 
-    // Scroll Animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+    <!-- Services Ticker -->
+    <div class="card col-span-4" style="padding: 10px 0; background: black;">
+      <div class="ticker-wrap">
+        <div class="ticker">
+          <span class="tech-item">vMIX PRO</span>
+          <span class="tech-item">NDI TOOLS</span>
+          <span class="tech-item">DANTE AUDIO</span>
+          <span class="tech-item">BIRDDOG PTZ</span>
+          <span class="tech-item">SRT STREAMING</span>
+          <span class="tech-item">RTX 5090 STUDIO</span>
+          <!-- Duplicate for seamless loop -->
+          <span class="tech-item">vMIX PRO</span>
+          <span class="tech-item">NDI TOOLS</span>
+          <span class="tech-item">DANTE AUDIO</span>
+          <span class="tech-item">BIRDDOG PTZ</span>
+          <span class="tech-item">SRT STREAMING</span>
+          <span class="tech-item">RTX 5090 STUDIO</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Case Study -->
+    <div class="card col-span-2">
+      <h3>Featured Work</h3>
+      <h2>UN Davos Event</h2>
+      <p style="margin-bottom: 15px;">Controlled 6 BirdDog PTZ cameras in Switzerland from my desk in Sicily. Zero latency issues. Full broadcast graphics.</p>
+      <div style="display: flex; gap: 10px;">
+        <span class="status-badge" style="background: rgba(255,255,255,0.1); color: white; border: none;">Remote TD</span>
+        <span class="status-badge" style="background: rgba(255,255,255,0.1); color: white; border: none;">Hybrid</span>
+      </div>
+    </div>
+
+    <!-- Contact Block -->
+    <div class="card col-span-2" style="background: #2563eb; border: none;">
+      <h3 style="color: rgba(255,255,255,0.7);">Ready to go live?</h3>
+      <h2 style="color: white;">Let's build your rundown.</h2>
+      <p style="color: rgba(255,255,255,0.9);">Technical Recon from €150. Full show ops from €450.</p>
+      <a href="mailto:enzo@esrs.uk" class="btn" style="background: black; color: white;">Book Enzo</a>
+    </div>
+
+  </div>
 
 </body>
 </html>
