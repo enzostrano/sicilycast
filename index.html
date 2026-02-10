@@ -1,95 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SicilyCast | Remote vMix Director</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enzo Strano | Remote Technical Director</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050505',
+                        card: '#111111',
+                        accent: '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #050505; color: white; }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        @media (min-width: 768px) {
+            .bento-grid {
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(4, auto);
+            }
+            .col-span-2 { grid-column: span 2; }
+            .col-span-4 { grid-column: span 4; }
+            .row-span-2 { grid-row: span 2; }
+        }
+        .card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .card:hover { border-color: #3b82f6; transform: translateY(-2px); }
+        .glow {
+            position: absolute; width: 100%; height: 100%;
+            background: radial-gradient(circle at top right, rgba(59,130,246,0.1), transparent 40%);
+            top: 0; left: 0; pointer-events: none;
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
 
-  <!-- Nav -->
-  <nav>
-    <div class="logo">SicilyCast</div>
-    <div class="status-badge">
-      <div class="pulse"></div>
-      <span>LIVE</span>
-    </div>
-  </nav>
-
-  <!-- Main Grid -->
-  <div class="main-container">
-    <div class="grid">
-      
-      <!-- HERO (Big Video) -->
-      <div class="card col-8 row-2 video-card">
-        <video autoplay muted loop playsinline class="bg-video">
-          <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
-        </video>
-        <div class="overlay">
-          <h1>Remote Broadcast<br>Redefined.</h1>
-          <p>I turn your webcam event into a global TV show.</p>
-          <a href="mailto:enzo@esrs.uk" class="btn">Get a Quote</a>
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 bg-black/50 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight">SicilyCast</div>
+            <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-500 text-xs font-bold">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                AVAILABLE
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <!-- INTRO -->
-      <div class="card col-4">
-        <h3>Enzo Strano</h3>
-        <h2>Sicily Studio.</h2>
-        <p>17 years London exp. Now operating remotely with redundancy.</p>
-      </div>
+    <!-- Main Grid -->
+    <main class="bento-grid pt-32">
 
-      <!-- STAT 1 -->
-      <div class="card col-2">
-        <h3>Uptime</h3>
-        <h2 style="color: #22c55e;">99.9%</h2>
-      </div>
-
-      <!-- STAT 2 -->
-      <div class="card col-2">
-        <h3>Capacity</h3>
-        <h2 style="color: #3b82f6;">8 Cams</h2>
-      </div>
-
-      <!-- SERVICES TICKER -->
-      <div class="card col-12 ticker-card">
-        <div class="ticker-wrap">
-          <div class="ticker">
-            <span class="tech-item">vMIX PRO</span>
-            <span class="tech-item">NDI TOOLS</span>
-            <span class="tech-item">DANTE AUDIO</span>
-            <span class="tech-item">BIRDDOG PTZ</span>
-            <span class="tech-item">RTX 5090</span>
-            <span class="tech-item">STARLINK</span>
-            <!-- Duplicate -->
-            <span class="tech-item">vMIX PRO</span>
-            <span class="tech-item">NDI TOOLS</span>
-            <span class="tech-item">DANTE AUDIO</span>
-            <span class="tech-item">BIRDDOG PTZ</span>
-            <span class="tech-item">RTX 5090</span>
-            <span class="tech-item">STARLINK</span>
-          </div>
+        <!-- Hero Card (Video) -->
+        <div class="card col-span-4 md:col-span-2 md:row-span-2 relative group p-0 min-h-[500px]">
+            <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 transition duration-500">
+                <source src="https://cdn.coverr.co/videos/coverr-recording-studio-setup-5390/1080p.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+            <div class="relative h-full flex flex-col justify-end p-8 z-10">
+                <h1 class="text-5xl font-bold mb-4 leading-tight">Remote.<br>Redundant.<br>Reliable.</h1>
+                <p class="text-gray-300 text-lg mb-6">I turn remote feeds into broadcast TV shows from my Sicily studio.</p>
+                <a href="mailto:enzo@esrs.uk" class="w-fit bg-white text-black px-6 py-3 rounded-full font-bold hover:bg-gray-200 transition">Get a Quote</a>
+            </div>
         </div>
-      </div>
 
-      <!-- UN DAVOS CASE STUDY -->
-      <div class="card col-6">
-        <h3>Featured Work</h3>
-        <h2>UN Davos Event</h2>
-        <p>Controlled 6 BirdDog PTZ cameras in Switzerland from Sicily. Zero latency. Full broadcast graphics.</p>
-      </div>
+        <!-- Profile / Intro -->
+        <div class="card col-span-4 md:col-span-2">
+            <div class="glow"></div>
+            <h3 class="text-blue-500 font-bold mb-2 uppercase tracking-wider text-sm">Technical Director</h3>
+            <h2 class="text-3xl font-bold mb-4">Enzo Strano</h2>
+            <p class="text-gray-400 leading-relaxed">
+                17 years London broadcast experience. Now operating remotely from Sicily with enterprise-grade redundancy.
+                <br><br>
+                I switch cameras, mix audio, and manage graphics for clients across Europe without stepping on a plane.
+            </p>
+        </div>
 
-      <!-- CONTACT -->
-      <div class="card col-6" style="background: #2563eb;">
-        <h3 style="color: rgba(255,255,255,0.7);">Ready?</h3>
-        <h2>Start Production.</h2>
-        <a href="mailto:enzo@esrs.uk" class="btn" style="background: black; color: white;">Book Now</a>
-      </div>
+        <!-- Tech Stack -->
+        <div class="card md:col-span-1">
+            <h3 class="text-gray-500 font-bold mb-4 uppercase text-xs">Core Stack</h3>
+            <ul class="space-y-3 font-medium text-gray-300">
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> vMix Pro</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> NDI Tools</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> Dante Audio</li>
+                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span> BirdDog PTZ</li>
+            </ul>
+        </div>
 
-    </div>
-  </div>
+        <!-- Stats -->
+        <div class="card md:col-span-1 flex flex-col justify-center items-center text-center">
+            <div class="text-5xl font-bold text-green-500 mb-2">99.9%</div>
+            <div class="text-sm text-gray-400 font-bold uppercase tracking-widest">Uptime</div>
+            <div class="text-xs text-gray-600 mt-2">Starlink Failover</div>
+        </div>
+
+        <!-- Case Study: UN Davos -->
+        <div class="card col-span-4 md:col-span-2 bg-gradient-to-br from-[#111] to-[#1a1a1a]">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <h3 class="text-gray-500 font-bold uppercase text-xs mb-1">Featured Case Study</h3>
+                    <h2 class="text-2xl font-bold">UN Davos Event</h2>
+                </div>
+                <div class="bg-white/10 px-3 py-1 rounded text-xs font-bold">SWITZERLAND</div>
+            </div>
+            <p class="text-gray-400 mb-6">
+                Fully remote production. Controlled 6 BirdDog PTZ cameras in Davos from my desk in Sicily.
+                Managed live switching, lower thirds, and audio mixing with zero latency.
+            </p>
+            <div class="flex gap-2">
+                <span class="px-3 py-1 bg-blue-500/10 text-blue-400 rounded text-xs font-bold">Remote TD</span>
+                <span class="px-3 py-1 bg-purple-500/10 text-purple-400 rounded text-xs font-bold">Hybrid Event</span>
+            </div>
+        </div>
+
+        <!-- Contact / CTA -->
+        <div class="card col-span-4 md:col-span-2 bg-blue-600 border-none">
+            <div class="h-full flex flex-col justify-between">
+                <div>
+                    <h2 class="text-3xl font-bold text-white mb-2">Ready to go live?</h2>
+                    <p class="text-blue-100">Booking Q3/Q4 2026 now.</p>
+                </div>
+                <div class="mt-8">
+                    <a href="mailto:enzo@esrs.uk" class="inline-block bg-black text-white px-8 py-4 rounded-xl font-bold hover:bg-gray-900 transition w-full text-center">
+                        Book Production Recco (€150)
+                    </a>
+                    <p class="text-center text-blue-200 text-sm mt-4">Full show ops from €450/day</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="text-center py-12 text-gray-600 text-sm">
+        &copy; 2026 Enzo Strano | SicilyCast
+    </footer>
 
 </body>
 </html>
